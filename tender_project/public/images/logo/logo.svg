@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 231 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #465fff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        font-family: Roboto-Black, Roboto;
+        font-size: 28px;
+        font-weight: 800;
+      }
+
+      .cls-3 {
+        fill-opacity: .7;
+      }
+
+      .cls-4 {
+        fill-opacity: .9;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <g>
+    <g id="Layer_1">
+      <path class="cls-1" d="M.4,12.6C.4,5.7,6.1,0,13.1,0h22.7c7,0,12.6,5.7,12.6,12.6v22.7c0,7-5.7,12.6-12.6,12.6H13.1c-7,0-12.6-5.7-12.6-12.6V12.6Z"/>
+      <path class="cls-2" d="M13.1,12.6c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v22.7c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5V12.6Z"/>
+      <path class="cls-4" d="M22.5,22.7c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v12.6c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-12.6Z" shape-rendering="crispEdges"/>
+      <path class="cls-3" d="M32,16.4c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v18.9c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-18.9Z" shape-rendering="crispEdges"/>
+      <text class="cls-5" transform="translate(51 35)"><tspan x="0" y="0">TenderBender</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,920 @@
+[
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Lucrari de demolare / Demolition works",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.00",
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Preturile Unitare includ toata manopera pentru demontare/demolare si eliminarea in conditii de siguranta in afara santierului cu respectarea tuturor prevederilor legale, pretul unitar include transportul. Contractantul trebuie să respecte toate restricțiile de igienă/siguranta si regulament din clădire în timpul procesului de demolare\nRate includes all associated labour for dismantling/demolition and safe disposal off site in accordance with all applicable statutory regulations, all safety/hygiene regulations and house rules. Rate includes transportation ",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": null,
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "\nInterventii tavane / Ceiling interventions",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": null,
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare tavan casetat existent;\nDismantling the existing tiled ceiling",
+      "height": null,
+      "qty_3rd": 2096.0,
+      "qty_5th": 1917.4,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.01",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare bandou/tavan lis gips-carton;\nDismantling the existing plasterboard ceiling",
+      "height": null,
+      "qty_3rd": 1006.5999999999999,
+      "qty_5th": 1151.6,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.02",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Interventii pereti si tamplarie / Walls and Glass partitions interventions",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": null,
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare pereti din gips carton, se considera din placa in placa;\nDismantling plasterboard walls, from slab to slab;",
+      "height": 380.0,
+      "qty_3rd": 1285.0,
+      "qty_5th": 2240.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.03",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare placare din gips carton; ATENTIE! Se vor pastra placarile din gips carton care protejeaza la foc contravantuirile metalice;\nDismantling plasterboard cladding; Attention All 4 sides of the bracing will be preserved ;",
+      "height": 260.0,
+      "qty_3rd": 13.0,
+      "qty_5th": 78.3,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.04",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare sistem de compartimentare modulara, cu panouri din sticla simpla;\nDismantling the modular partitioning system, with simple glass panels;",
+      "height": 260.0,
+      "qty_3rd": 177.2,
+      "qty_5th": 256.6,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.05",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare usi de sticla montate in sistem de compartimentare modulara;\nDismantling of glass doors mounted in a modular partitioning system,",
+      "height": null,
+      "qty_3rd": 7.0,
+      "qty_5th": 36.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.06",
+        "Unit": "buc/pcs",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare usi pline, montate in pereti de gipscarton;\nDismantling of solid, fire rated doors, mounted in a gypsum wall,",
+      "height": 210.0,
+      "qty_3rd": 26.0,
+      "qty_5th": 22.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.07",
+        "Unit": "buc/pcs",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare placare ceramica/faianta;\nDismantling existing wall tiles;",
+      "height": 230.0,
+      "qty_3rd": 234.0,
+      "qty_5th": 234.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.08",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Interventii pardoseli / Floor interventions",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": null,
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare finisaj pardoseala existenta (mocheta si LVT, inclusiv plinte);\nRemoving existing floor finish (carpet or LVT, including skirting);",
+      "height": null,
+      "qty_3rd": 3025.0,
+      "qty_5th": 2975.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.09",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare finisaj pardoseala existenta (ceramica/gresie);\nRemoving existing floor finish (ceramics/floor tiles);",
+      "height": null,
+      "qty_3rd": 85.5,
+      "qty_5th": 85.5,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.10",
+        "Unit": "Mp/\nSqm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Evacuare mobilier si decoratiuni/ Furniture and decoration evacuation",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": null,
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Evacuare mobilier existent / Evacuation existing furniture",
+      "height": null,
+      "qty_3rd": 1.0,
+      "qty_5th": 1.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.11",
+        "Unit": "ans.",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "Demontare rolete ferestre fatade / Removing existing window blinds",
+      "height": null,
+      "qty_3rd": 165.0,
+      "qty_5th": 165.0,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "1.12",
+        "Unit": "Ml/\nLm",
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "TOTAL CARRIED FORWARD TO SUMMARY",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": 0,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": null,
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Architectural works dismantling",
+    "raw": {
+      "description": "a) Cantitatile nu contin pierderi! Contractorul este obligat sa verifice toate cantitatile din prezenta documentatie de licitatie. \nIn cazul in care apar diferente de cantitati de lucrari datorate diverselor tehnologii aplicate, a organizarii si esalonarii lucrarilor, a folosirii diversilor subcontractori etc, trebuie sa anunte in timp util beneficiarul.\nOrice solicitare ulterioara nu va fi luata in considerare/\nThe quantities do not include loses! The contractor has the obligation to verify all the quantities from this BOQ. In case of differeces of quantities derived from using different technologies or materials, or due to the site management, using different subcontractors and so on, the Client will be notified first hand.\nAny subsequent request will not be considered.\nb) Constructorul are datoria de a-si face propriile calcule si masuratori pe baza carora se va face contractul. /\nThe manufacturer has the duty to make his own calculations for the surfaces on which it will make the contract.\nc) Pentru calculul suprafetei partitie de sticla s-au luat in considerare montantii/\nFor the calculation of the glass partition were taken into account the mullions;\nd) Ofertantul va verifica formulele introduse si va informa project managerul in cazul unei omisiuni/ nepotriviri/\nThe bidder will verify all the formulas and inform the project manager in case of omission/ discrepancy ;",
+      "height": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null,
+      "unmapped": {
+        "Identifier/\nIndicativ": "NOTE:",
+        "Unit": null,
+        "Comentarii/\nComments/": null
+      }
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": null,
+      "description": "DEMONTARE SI ELIMINARE IN AFARA SANTIERULUI ELECTRICE\nDISMANTLING AND DISPOSAL OFF SITE ELECTRICAL WORKS",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": null,
+      "description": "Preturile Unitare includ toata manopera pentru demontare/demolare si eliminarea in conditii de siguranta in afara santierului cu respectarea tuturor prevederilor legale, pretul unitar include transportul. Contractantul trebuie să respecte toate restricțiile de igienă/siguranta si regulament din clădire în timpul procesului de demolare\nRate includes all associated labour for dismantling/demolition and safe disposal off site in accordance with all applicable statutory regulations, all safety/hygiene regulations and house rules. Rate includes transportation ",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.01",
+      "description": "Tablou electric, include tablourile de BMS, demontare si transport\nElectrical panel, includes the BMS panels,disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 7.0,
+      "qty_5th": 9.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.02",
+      "description": "Corp de iluminat, include cablu, tub, doze derivatie si accesorii de montaj, demontare si transport\nLight fixture, includes cable, conduit, junction boxes, and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 727.0,
+      "qty_5th": 699.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.03",
+      "description": "Intrerupator, include cablu, tub, doze derivatie si accesorii de montaj, demontare si transport\nSwitch, includes cable, conduit, junction boxes, and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 117.0,
+      "qty_5th": 154.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.04",
+      "description": "Priza, include cablu, tub, doze derivatie si accesorii de montaj, demontare si transport\nSocket, includes cable, conduit, junction boxes, and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 71.0,
+      "qty_5th": 210.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.05",
+      "description": "Doza de pardoseala, include prizele, cablu, tub, doze derivatie si accesorii de montaj, demontare si transport\nFloor box, includes sockets, cable, conduit, junction boxes, and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 329.0,
+      "qty_5th": 258.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.06",
+      "description": "Deconectare echipamente, include cablu, tub, doze derivatie si accesorii de montaj, demontare\nDisconnection of equipment, includes cable, conduit, junction boxes, and mounting accessories, disassembly",
+      "unit": "buc",
+      "qty_3rd": 68.0,
+      "qty_5th": 52.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.07",
+      "description": "Pat cablu pardoseala si plafon, include sistem de prindere, demontare si transport\nCable tray for floor and ceiling, includes mounting system, disassembly and transport",
+      "unit": "m",
+      "qty_3rd": 1818.0,
+      "qty_5th": 1159.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.08",
+      "description": "Sistem egalizare potential, include bare de egalizare potential, conductor lify, platbanda, demontare si transport\nPotential equalization system, includes potential equalization bars, lify conductor, flat bar, disassembly and transport",
+      "unit": "sist.",
+      "qty_3rd": 1.0,
+      "qty_5th": 1.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.09",
+      "description": "RACK, demontare si transport\nRACK,disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 11.0,
+      "qty_5th": 20.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.10",
+      "description": "Priza voce date din doza de pardoseala, include cablu si accesorii de montaj, demontare si transport\nVoice/data socket from floor box, includes cable and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 1512.0,
+      "qty_5th": 970.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.11",
+      "description": "Priza voce date, include cablu si accesorii de montaj, demontare si transport\nVoice/data socket, includes cable and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 0.0,
+      "qty_5th": 111.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.12",
+      "description": "Fibra optica, include accesorii de montaj, demontare si transport\nOptical fiber, includes mounting accessories, disassembly and transport",
+      "unit": "m",
+      "qty_3rd": 65.0,
+      "qty_5th": 84.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.13",
+      "description": "Camera video, include cablu si accesorii de montaj, demontare si transport\nVideo camera, includes cable and mounting accessories, disassembly and transport",
+      "unit": "buc",
+      "qty_3rd": 16.0,
+      "qty_5th": 8.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.14",
+      "description": "NOU Tije pentru montarea detectorilor de fum montati sub plafonul existent,  include cablu si accesorii de montaj, instalare si transport\nNEW Rods for installing smoke detectors mounted under the existing ceiling, including cable and mounting accessories, installation, and transportation",
+      "unit": "buc",
+      "qty_3rd": 101.0,
+      "qty_5th": 64.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.15",
+      "description": "NOU corp de iluminat de siguranta cu sursa LED 1.5W, montaj suspendat, tip mentinut, PERMANENT, cu autonomie min. 3 h, distanta de observare 20 m, cu autotest, cu abtibild corespunzator locului de montaj, IP20 - iluminat de securitate pentru evacuare ( model referinta TM TECHNOLOGIE ONTEC G E1E  301 AT),  include accesorii de montaj, instalare si transport\nNEW EMERGENCY LIGHTING, LED 1.5W, suspended mount, maintained type, PERMANENT, with a minimum autonomy of 3 hours, observation distance of 20 meters, with self-test function, with appropriate installation location sticker, IP20 – emergency evacuation lighting (reference model TM TECHNOLOGIE ONTEC G E1E 301 AT), includes cable and mounting accessories, installation, and transportation.",
+      "unit": "buc",
+      "qty_3rd": 25.0,
+      "qty_5th": 25.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.15",
+      "description": "NOU corp de iluminat de siguranta, echipat cu sursa LED 3W, flux simetric, montaj suspendat pe tija, tip mentinut, NEPERMANENT, cu autonomie 3 h, cu autotest, IP20 - iluminat de securitate impotriva panicii / iluminat de securitate pentru interventii ( model referinta TM TECHNOLOGIE iTECH M5 305 M AT),  include accesorii de montaj, instalare si transport\nNEW EMERGENCY LIGHTING, equipped with a 3W LED source, symmetric light flux, suspended mounting on a rod, maintained, NON-PERMANENT, with 3-hour autonomy, with self-test, IP20 – emergency lighting for panic situations / emergency lighting for interventions (reference model TM TECHNOLOGIE iTECH M5 305 M AT), includes mounting accessories, installation, and transport.",
+      "unit": "buc",
+      "qty_3rd": 22.0,
+      "qty_5th": 22.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.16",
+      "description": "NOU Cablu alimentare din cupru CYYF 3x1.5, cu intarzierea propagarii focului, clasa de reactie la foc Cca s1 d1 a3, Un=1.0kV,  include accesorii de montaj, instalare si transport\nNEW Copper power cable CYYF 3x1.5, with fire propagation delay, fire reaction class Cca s1 d1 a3, Un = 1.0kV, including mounting accessories, installation, and transportation.",
+      "unit": "m",
+      "qty_3rd": 940.0,
+      "qty_5th": 940.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "IE01.17",
+      "description": "NOU Testare tablouri electrice ramase functionale \nNEW Electrical Panel Testing for remaining panel ",
+      "unit": "buc",
+      "qty_3rd": 2.0,
+      "qty_5th": 2.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": null,
+      "description": "TOTAL CARRIED FORWARD TO SUMMARY",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": "NOTE:",
+      "description": "a) Cantitatile nu contin pierderi! Contractorul este obligat sa verifice toate cantitatile din prezenta documentatie de licitatie. \nIn cazul in care apar diferente de cantitati de lucrari datorate diverselor tehnologii aplicate, a organizarii si esalonarii lucrarilor, a folosirii diversilor subcontractori etc, trebuie sa anunte in timp util beneficiarul.\nOrice solicitare ulterioara nu va fi luata in considerare/\nThe quantities do not include loses! The contractor has the obligation to verify all the quantities from this BOQ. In case of differeces of quantities derived from using different technologies or materials, or due to the site management, using different subcontractors and so on, the Client will be notified first hand.\nAny subsequent request will not be considered.\nb) Constructorul are datoria de a-si face propriile calcule si masuratori pe baza carora se va face contractul. /\nThe manufacturer has the duty to make his own calculations for the surfaces on which it will make the contract.\nc) Pentru calculul suprafetei partitie de sticla s-au luat in considerare montantii/\nFor the calculation of the glass partition were taken into account the mullions;\nd) Ofertantul va verifica formulele introduse si va informa project managerul in cazul unei omisiuni/ nepotriviri/\nThe bidder will verify all the formulas and inform the project manager in case of omission/ discrepancy ;",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": null,
+      "description": "NOTA 1: \n-  DEMONTAREA SISTEMUL DE DETECTIE INCENDIU NU INTRA IN ACEST BOQ DEOARECE CLADIREA NU POATE RAMANE FARA SISTEM DE DETECTIE INCENDIU FUNCTIONAL! \n- THE DISMANTLING OF THE FIRE DETECTION SYSTEM IS NOT INCLUDED IN THIS BOQ BECAUSE THE BUILDING CANNOT REMAIN WITHOUT A FUNCTIONAL FIRE DETECTION SYSTEM!",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": null,
+      "description": "NOTA 2\n-DUPA DEMONTAREA PLAFOANELOR, TOATE DETECTOARELE DE FUM DE SUB PLAFON SE VOR MONTA PE TIJA ASTFEL INCAT SA NU SE MODIFICE SISTEMUL DE INCENDIU EXISTENT !\n\n- AFTER REMOVING THE CEILINGS, ALL SMOKE DETECTORS BELOW THE CEILING WILL BE MOUNTED ON THE RODS TO DONT MODIFY THE EXISTING SYSTEM .",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Electrical works dismantling",
+    "raw": {
+      "code": null,
+      "description": "NOTA 3 \nPENTRU PASTRAREA UNUI SISTEM DE ILUMINAT SE SIGURANTA FUNCTIONAL PANA LA INCEPEREA EXECUTIEI PROIECTULUI DE FIT-OUT SE VOR REALIZA URMATOARELE MASURI :\n- SE VOR DEMONTA TOATE TABLOURILE ELECTRICE EXISTENTE CU EXCEPTIA TABLOURILOR DE VITALI DE PE AMBELE ETAJE . CABLURILE AFERENTE TABLOURILOR DEMONTATE SE VOR IZOLA CORESPUNZATOR . TABLORILE DE VOR PRINDE FIECARE  CU 2 TIJE TAVAN - PARDOSEALA ASTFEL INCAT SA POATE FI DEMOLATI PERETII PE CARE SUNT MONTATE . \n- IN CADRUL TABLOURILOR RAMASE PE POZITIE - TOATE DISJUNCTOARELE AFERENTE ACESTOR TABLOURI ( INCLUSIV SEPARATORUL DE SARCINA ) VOR FI TRECUTE PE POZITIA DECUPLAT ( TABLOURILE VOR STA INCUIATE PE ACEASTA POZITIE ) .  DUPA DEMONTAREA TUTUROR CABLURILOR SI  TERMINAREA FAZEI DE DEMONTARE TABLOURILE RAMASE PE POZITIE SE VOR TESTA / VERIFICA PT A FI FUNCTIONALE SI SE VOR CUPLA LA ENERGIE ( PRIN TRECEREA PE ON A SEPARATORULUI PRINCIPAL ) SI SE VA CUPLA UN SINGUR CIRCUIT DE ILUMINAT  CARE VA DESERVII CORPURILE DE ILUMINAT DE SIGURANTA NOU POZITIONATE ( NOILE CORPURI DE ILUMINAT DE SIGURANȚĂ VOR FI ALIMENTATE DIN TABLOURILE VITALI ) .  \n\nTO KEEP THE EMERGENCY  LIGHTING SYSTEM FUNCTIONALLY  UNTIL THE START OF THE EXECUTION OF THE FIT-OUT PROJECT, THE FOLLOWING MEASURES WILL BE CARRIED OUT :\n- ALL  EXISTING ELECTRICAL BOARDS WILL BE REMOVED WITH THE EXCEPTION OF   VITAL ( GENERATOR )  PANEL ON BOTH FLOORS. THE CABLES RELATED TO THE DISASSEMBLED PANELS WILL BE CORRECTLY ISOLATED. ENCLOUSER OF THE ELECTRICAL PANEL  WILL ATTACH TO  CEILING - FLOOR EACH WITH 2 RODS SO THAT THE WALLS ON WHICH THEY ARE MOUNTED CAN BE DEMOLISHED. \n- FOR THE REMAINING PANEL ( VITAL PANEL )  - ALL CIRCUIT BREAKERS RELATED TO THESE PANELS (INCLUDING THE MAIN SWITCH  DISCONNECTOR) WILL BE SWITCHED TO THE DISCONNECTED ( OFF ) POSITION (THE PANELS WILL STAY LOCKED IN THIS POSITION).  AFTER DISMANTLING ALL THE CABLES AND COMPLETING THE DISMANTLING PHASE, THE BOARDS REMAINING IN POSITION WILL BE TESTED / CHECKED FOR FUNCTIONALITY AND WILL BE CONNECTED TO ENERGY (BY SWITCHING ON THE MAIN DISCONNECTOR) AND A SINGLE LIGHTING CIRCUIT WILL BE CONNECTED HOW  WILL SERVE THE FIXTURES  EMERGENCY LIGHTING  (THE NEW EMERGENCY  LIGHTS WILL BE POWERED FROM THE VITAL PANELS).",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": null,
+      "description": "DEMONTARE SI ELIMINARE IN AFARA SANTIERULUI SANITARE\nDISMANTLING AND DISPOSAL OFF SITE PLUMBING WORKS",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": null,
+      "description": "Preturile Unitare includ toata manopera pentru demontare/demolare si eliminarea in conditii de siguranta in afara santierului cu respectarea tuturor prevederilor legale, pretul unitar include transportul. Contractantul trebuie să respecte toate restricțiile de igienă/siguranta si regulament din clădire în timpul procesului de demolare\nRate includes all associated labour for dismantling/demolition and safe disposal off site in accordance with all applicable statutory regulations, all safety/hygiene regulations and house rules. Rate includes transportation ",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.01",
+      "description": "Teava universala din polietilena pentru apa rece si apa calda menajera, inclusiv coturi, teuri, mufe, etc. vane, filtre, clapete de sens, material marunt, termoizolatie, sistem complet de suporti pentru conducte de apa, din otel zincat (bride, tije, mansoane, antizgomot, sisteme de prindere, suruburi etc.), demontare si transport.\nUniversal polyethylene pipe for cold water and domestic hot water, including bends, tees, plugs, etc. valves, filters, dampers, small material, insulation, complete system of supports for water pipes, made of galvanized steel (clamps, rods, sleeves, anti-noise, fastening systems, screws, etc.), disassembly and transport.",
+      "unit": "m",
+      "qty_3rd": 190.0,
+      "qty_5th": 240.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.02",
+      "description": "Spalator din inox, ţeava de scurgere, blat, inclusiv cadru sustinere, ventil de scurgere, sifon pentru spalator, ţeava din material plastic, console braţ dublu pentru susţinere, din fonta, material mărunt (diblu lemn, ipsos, codez), baterie, racorduri flexibile, demontare si transport;\nStainless steel sink, drain pipe, worktop, including support frame, drain valve, siphon for sink, plastic pipe, double arm brackets for support, cast iron, small material (wood dowel, plaster, codez), battery, connections flexible, disassembly and transport;",
+      "unit": "buc",
+      "qty_3rd": 3.0,
+      "qty_5th": 4.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.03",
+      "description": "Lavoar din portelan sanitar, ţeava de scurgere, inclusiv cadru sustinere, ventil de scurgere, sifon, ţeava din material plastic, console braţ dublu pentru susţinere, din fonta, material mărunt (diblu lemn, ipsos, codez), baterie, racorduri flexibile, demontare si transport;\nSanitary porcelain sink, drain pipe, including support frame, drain valve, siphon, plastic pipe, double arm brackets for support, cast iron, small material (double wood, plaster, codez), faucet, flexible connections, disassembly and transport;",
+      "unit": "buc",
+      "qty_3rd": 10.0,
+      "qty_5th": 14.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.04",
+      "description": "Cabina dus, ţeava de scurgere din material plastic, cabina dus, ventil de scurgere, inclusiv sifon, ţeava din material plastic, material mărunt (diblu lemn, ipsos, codez), baterie, racorduri flexibile, demontare si transport;\nShower cabin, plastic drain pipe, shower cabin, drain valve, including siphon, plastic pipe, small material (wood dowels, plaster, codez), battery, flexible connections, disassembly and transport;",
+      "unit": "buc",
+      "qty_3rd": 0.0,
+      "qty_5th": 5.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.05",
+      "description": "Vas pentru closet, încastrat în perete, cadru de sustinere, cu rezervorul de spălare montat ingropat, ventil de scurgere, ţeava de spălare din material plastic, racord flexibil, cot flexibil, cot pentru vas de closet, capac si colac din plastic material mărunt (dibluri lemn, ipsos, holtsuruburi, codez, dicloretan), demontare si transport;\nWall-mounted toilet bowl, support frame, flush-mounted flush tank, drain valve, plastic flush pipe, flexible connection, flexible elbow, toilet bowl elbow, lid and small plastic coil ( wooden dowels, plaster, wood screws, codez, dichloroethane), disassembly and transport;",
+      "unit": "buc",
+      "qty_3rd": 18.0,
+      "qty_5th": 20.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.06",
+      "description": "Pisoar din portelan, ventil si sifon de scurgere, cadru metalic de prindere in peretii de gipscarton, material marunt, de etansare, de fixare, demontare si transport;\nPorcelain urinal, drain valve and siphon, metal frame for fastening in plasterboard walls, small material, sealing, fixing, dismantling and transport;",
+      "unit": "buc",
+      "qty_3rd": 6.0,
+      "qty_5th": 8.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "IS01.07",
+      "description": "Teava din polipropilena pentru canalizare interioara, inclusiv coturile, ramificatiile, etc., sistem complet de suporti pentru conducte de canalizare, din otel zincat (bride, tije, mansoane, antizgomot, sisteme de prindere, suruburi etc.), demontare si transport.\nPolypropylene pipe for internal sewerage, including bends, branches, etc., complete system of supports for sewerage pipes, made of galvanized steel (flanges, rods, sleeves, anti-noise, fastening systems, screws, etc.), disassembly and transport.",
+      "unit": "m",
+      "qty_3rd": 510.0,
+      "qty_5th": 540.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": null,
+      "description": "TOTAL CARRIED FORWARD TO SUMMARY",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "Nota CBRE",
+      "description": "ATENTIE! DEMONTAREA SISTEMUL DE HIDRANTI DE INCENDIU NU INTRA IN ACEST BOQ DEOARECE CLADIREA NU POATE RAMANE FARA SISTEM DE HIDRANTI INCENDIU FUNCTIONALI!\nATTENTION! THE DISMANTLING OF THE FIRE HYDRANTS SYSTEM IS NOT INCLUDED IN THIS BOQ BECAUSE THE BUILDING CANNOT REMAIN WITHOUT A FUNCTIONAL FIRE HYDRANT SYSTEM!",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Plumbing works dismantling",
+    "raw": {
+      "code": "NOTE:",
+      "description": "a) Cantitatile nu contin pierderi! Contractorul este obligat sa verifice toate cantitatile din prezenta documentatie de licitatie. \nIn cazul in care apar diferente de cantitati de lucrari datorate diverselor tehnologii aplicate, a organizarii si esalonarii lucrarilor, a folosirii diversilor subcontractori etc, trebuie sa anunte in timp util beneficiarul.\nOrice solicitare ulterioara nu va fi luata in considerare/\nThe quantities do not include loses! The contractor has the obligation to verify all the quantities from this BOQ. In case of differeces of quantities derived from using different technologies or materials, or due to the site management, using different subcontractors and so on, the Client will be notified first hand.\nAny subsequent request will not be considered.\nb) Constructorul are datoria de a-si face propriile calcule si masuratori pe baza carora se va face contractul. /\nThe manufacturer has the duty to make his own calculations for the surfaces on which it will make the contract.\nc) Pentru calculul suprafetei partitie de sticla s-au luat in considerare montantii/\nFor the calculation of the glass partition were taken into account the mullions;\nd) Ofertantul va verifica formulele introduse si va informa project managerul in cazul unei omisiuni/ nepotriviri/\nThe bidder will verify all the formulas and inform the project manager in case of omission/ discrepancy ;",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": null,
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": null,
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.01",
+      "unit": "buc",
+      "qty_3rd": 381.0,
+      "qty_5th": 270.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.02",
+      "unit": "buc",
+      "qty_3rd": 33.0,
+      "qty_5th": 42.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.03",
+      "unit": "ANS",
+      "qty_3rd": 1.0,
+      "qty_5th": 1.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.04",
+      "unit": "ml",
+      "qty_3rd": 700.0,
+      "qty_5th": 950.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.05",
+      "unit": "ml",
+      "qty_3rd": 895.0,
+      "qty_5th": 800.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.06",
+      "unit": "buc",
+      "qty_3rd": 66.0,
+      "qty_5th": 71.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.07",
+      "unit": "buc",
+      "qty_3rd": 3.0,
+      "qty_5th": 6.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.08",
+      "unit": "buc",
+      "qty_3rd": 5.0,
+      "qty_5th": 3.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.09",
+      "unit": "buc",
+      "qty_3rd": 4.0,
+      "qty_5th": 8.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "IV01.10",
+      "unit": "ml",
+      "qty_3rd": 2680.0,
+      "qty_5th": 2750.0,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": null,
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  },
+  {
+    "sheetname": "Ventilation dismantling",
+    "raw": {
+      "code": "NOTE:",
+      "unit": null,
+      "qty_3rd": null,
+      "qty_5th": null,
+      "qty_total": null,
+      "price_unit": null
+    }
+  }
+]
