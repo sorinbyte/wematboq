@@ -1,24 +1,21 @@
 import ComponentCard from "@/components/common/ComponentCard";
-import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import ProiecteTable from "@/components/tables/ProiecteTable";
+import AddProjectBlock from "@/components/projects/AddProjectBlock";
 import { Metadata } from "next";
-import React from "react";
+import { ProjectsTable } from "@/components/tables/ProjectsTable";
 
 export const metadata: Metadata = {
   title: "Proiecte",
-  description:
-    "This is the Projects page, showing bids and projects won.",
+  description: "This is the Projects page, showing bids and projects won.",
 };
 
 export default function ProiectePage() {
   return (
-    <div>
-      <PageBreadcrumb pageTitle="Proiecte" />
-      <div className="space-y-6">
-        <ComponentCard title="Lista Proiecte">
-          <ProiecteTable />
-        </ComponentCard>
-      </div>
+    <div className="space-y-6">
+      <ComponentCard>
+        <AddProjectBlock />
+        <ProjectsTable />
+      </ComponentCard>
     </div>
   );
 }

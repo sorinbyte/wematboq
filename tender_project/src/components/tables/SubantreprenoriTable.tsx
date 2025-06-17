@@ -59,50 +59,36 @@ export default function SubantreprenoriTable() {
       <div className="max-w-full overflow-x-auto">
         <div className="min-w-[1102px]">
           <Table>
-            {/* Table Header */}
-            <TableHeader className="border-b border-gray-100 dark:border-white/[0.05]">
-              <TableRow>
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-                >
-                  Subcontractor Name
+            <TableHeader>
+              <TableRow className="bg-gray-100 dark:bg-gray-800">
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-start">
+                  Nume Subantreprenor
                 </TableCell>
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-                >
-                  Specialties
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-start">
+                  Specialități
                 </TableCell>
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-                >
-                  Project Bids
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-center">
+                  Proiecte ofertate
                 </TableCell>
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-                >
-                  Projects Won
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-center">
+                  Proiecte câștigate
                 </TableCell>
               </TableRow>
             </TableHeader>
 
-            {/* Table Body */}
             <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
               {tableData.map((sub) => (
                 <TableRow key={sub.id}>
                   <TableCell className="px-5 py-4 text-start text-theme-sm text-gray-800 dark:text-white/90">
                     {sub.name}
                   </TableCell>
-                  <TableCell className="px-4 py-4 text-start text-theme-sm text-gray-500 dark:text-gray-400">
+                  <TableCell className="px-5 py-4 text-start text-theme-sm text-gray-500 dark:text-gray-400">
                     {sub.specialties.join(", ")}
                   </TableCell>
-                  <TableCell className="px-4 py-4 text-start text-theme-sm text-gray-500 dark:text-gray-400">
+                  <TableCell className="px-5 py-4 text-center text-theme-sm text-gray-500 dark:text-gray-400">
                     {sub.bids}
                   </TableCell>
-                  <TableCell className="px-4 py-4 text-start text-theme-sm text-gray-500 dark:text-gray-400">
+                  <TableCell className="px-5 py-4 text-center text-theme-sm text-gray-500 dark:text-gray-400">
                     {sub.wins}
                   </TableCell>
                 </TableRow>

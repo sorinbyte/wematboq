@@ -1,0 +1,424 @@
+[
+  {
+    "id":"proj-1",
+    "projectname": "Northgate Complex",
+    "client": "Constructo S.A.",
+    "added": "15 Sep 2025",
+    "status": "outOfStock",
+    "offers": {
+      "available": 4,
+      "total": 10
+    },
+    "projectvalue": "\u20ac1M+",
+    "projectstart": "Q3 2024",
+    "biddingstart": "20 Jun 2024",
+    "biddingend": "30 Jun 2024",
+    "variantDetails": [
+      {
+        "packagename": "Architecture",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "22 Apr 2025"
+      },
+      {
+        "packagename": "Electrical",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "22 Jun 2024"
+      },
+      {
+        "packagename": "Fire Safety",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "16 Jan 2024"
+      }
+    ]
+  },
+  {
+    "id":"proj-2",
+    "projectname": "Northgate Complex",
+    "client": "MegaStruct",
+    "added": "15 Mar 2025",
+    "status": "paused",
+    "offers": {
+      "available": 7,
+      "total": 10
+    },
+    "projectvalue": "< \u20ac100k",
+    "projectstart": "Q4 2024",
+    "biddingstart": "16 Mar 2025",
+    "biddingend": "30 Mar 2025",
+    "variantDetails": [
+      {
+        "packagename": "Plumbing",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "08 Jun 2024"
+      },
+      {
+        "packagename": "Architecture",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "10 Nov 2025"
+      },
+      {
+        "packagename": "Concrete",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "21 Aug 2024"
+      }
+    ]
+  },
+  {
+    "id":"proj-3",
+    "projectname": "Eastline Residentials",
+    "client": "ACME Corp",
+    "added": "02 Jun 2024",
+    "status": "outOfStock",
+    "offers": {
+      "available": 6,
+      "total": 10
+    },
+    "projectvalue": "\u20ac500k\u2013\u20ac1M",
+    "projectstart": "Q1 2024",
+    "biddingstart": "23 Jan 2025",
+    "biddingend": "15 Feb 2025",
+    "variantDetails": [
+      {
+        "packagename": "Plumbing",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "24 Apr 2024"
+      },
+      {
+        "packagename": "HVAC",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "31 Jan 2024"
+      },
+      {
+        "packagename": "Electrical",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "20 Dec 2025"
+      }
+    ]
+  },
+  {
+    "id":"proj-4",
+    "projectname": "Green Tower Offices",
+    "client": "BuildPro Inc.",
+    "added": "14 Feb 2025",
+    "status": "outOfStock",
+    "offers": {
+      "available": 6,
+      "total": 10
+    },
+    "projectvalue": "\u20ac100k\u2013\u20ac250k",
+    "projectstart": "Q2 2026",
+    "biddingstart": "22 Apr 2024",
+    "biddingend": "30 Apr 2025",
+    "variantDetails": [
+      {
+        "packagename": "Electrical",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "21 Oct 2025"
+      },
+      {
+        "packagename": "Architecture",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "10 Aug 2025"
+      },
+      {
+        "packagename": "HVAC",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "05 Nov 2025"
+      }
+    ]
+  },
+  {
+    "id":"proj-5",
+    "projectname": "Harborview Terminal",
+    "client": "NextPhase Group",
+    "added": "10 Aug 2024",
+    "status": "active",
+    "offers": {
+      "available": 2,
+      "total": 10
+    },
+    "projectvalue": "\u20ac1M+",
+    "projectstart": "Q2 2024",
+    "biddingstart": "01 Mar 2024",
+    "biddingend": "30 Mar 2024",
+    "variantDetails": [
+      {
+        "packagename": "Fire Safety",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "13 Nov 2025"
+      },
+      {
+        "packagename": "Concrete",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "13 Jul 2024"
+      },
+      {
+        "packagename": "HVAC",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "04 May 2025"
+      }
+    ]
+  },
+  {
+    "id":"proj-6",
+    "projectname": "Eastline Residentials",
+    "client": "Nordic Construct",
+    "added": "15 Sep 2024",
+    "status": "active",
+    "offers": {
+      "available": 6,
+      "total": 10
+    },
+    "projectvalue": "\u20ac100k\u2013\u20ac250k",
+    "projectstart": "Q1 2024",
+    "biddingstart": "22 Aug 2024",
+    "biddingend": "30 Aug 2024",
+    "variantDetails": [
+      {
+        "packagename": "Fire Safety",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "15 Feb 2025"
+      },
+      {
+        "packagename": "Concrete",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "21 Apr 2024"
+      },
+      {
+        "packagename": "Architecture",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "26 Jul 2024"
+      }
+    ]
+  },
+  {
+    "id":"proj-7",
+    "projectname": "Skyline Business Hub",
+    "client": "Nordic Construct",
+    "added": "08 Dec 2024",
+    "status": "outOfStock",
+    "offers": {
+      "available": 3,
+      "total": 10
+    },
+    "projectvalue": "\u20ac1M+",
+    "projectstart": "Q1 2026",
+    "biddingstart": "21 Jul 2025",
+    "biddingend": "30 Jul 2025",
+    "variantDetails": [
+      {
+        "packagename": "HVAC",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-310",
+        "year": "14 Oct 2025",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "25 Nov 2024"
+      },
+      {
+        "packagename": "Fire Safety",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-228",
+        "year": "25 Feb 2024",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "01 Apr 2025"
+      },
+      {
+        "packagename": "Electrical",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-891",
+        "year": "24 Jul 2024",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "07 Oct 2025"
+      }
+    ]
+  },
+  {
+    "id":"proj-8",
+    "projectname": "Green Tower Offices",
+    "client": "Constructo S.A.",
+    "added": "11 Apr 2024",
+    "status": "outOfStock",
+    "offers": {
+      "available": 8,
+      "total": 10
+    },
+    "projectvalue": "\u20ac500k\u2013\u20ac1M",
+    "projectstart": "Q4 2026",
+    "biddingstart": "27 Feb 2025",
+    "biddingend": "30 Feb 2025",
+    "variantDetails": [
+      {
+        "packagename": "Architecture",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-777",
+        "year": "27 Jun 2025",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "10 Jun 2025"
+      },
+      {
+        "packagename": "Concrete",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-998",
+        "year": "28 Oct 2025",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "01 Feb 2024"
+      },
+      {
+        "packagename": "Plumbing",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-195",
+        "year": "18 Jun 2025",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "26 Dec 2025"
+      }
+    ]
+  },
+  {
+    "id":"proj-9",
+    "projectname": "Green Tower Offices",
+    "client": "MegaStruct",
+    "added": "25 Nov 2024",
+    "status": "outOfStock",
+    "offers": {
+      "available": 1,
+      "total": 10
+    },
+    "projectvalue": "\u20ac1M+",
+    "projectstart": "Q2 2025",
+    "biddingstart": "05 Oct 2025",
+    "biddingend": "30 Oct 2025",
+    "variantDetails": [
+      {
+        "packagename": "Electrical",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-362",
+        "year": "23 Jan 2024",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "10 Oct 2025"
+      },
+      {
+        "packagename": "HVAC",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-737",
+        "year": "04 Dec 2024",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "01 Dec 2025"
+      },
+      {
+        "packagename": "Architecture",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-808",
+        "year": "25 Jun 2025",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "07 Jan 2024"
+      }
+    ]
+  },
+  {
+    "id":"proj-10",
+    "projectname": "Metro Center Upgrade",
+    "client": "Tecton Developers",
+    "added": "24 Aug 2024",
+    "status": "paused",
+    "offers": {
+      "available": 2,
+      "total": 10
+    },
+    "projectvalue": "< \u20ac100k",
+    "projectstart": "Q2 2024",
+    "biddingstart": "05 Feb 2025",
+    "biddingend": "20 Feb 2025",
+    "variantDetails": [
+      {
+        "packagename": "Architecture",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-188",
+        "year": "14 Aug 2025",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "09 Mar 2025"
+      },
+      {
+        "packagename": "Concrete",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-801",
+        "year": "25 Apr 2024",
+        "status": "Draft",
+        "author": "Gigel Ninel",
+        "created": "14 Mar 2024"
+      },
+      {
+        "packagename": "Electrical",
+        "available": "",
+        "format": "Standard",
+        "label": "Engineering",
+        "country": "RO",
+        "cat": "PKG-821",
+        "year": "17 Jul 2024",
+        "status": "Sent",
+        "author": "Gigel Ninel",
+        "created": "27 Mar 2024"
+      }
+    ]
+  }
+]
