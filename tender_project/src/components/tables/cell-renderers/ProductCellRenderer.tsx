@@ -5,14 +5,14 @@ import styles from "./ProductCellRenderer.module.css";
 
 export const ProductCellRenderer: FunctionComponent<CustomCellRendererProps> = ({
   value,
-  data: { image, category, id }, // make sure `id` is passed in each row
+  data: { image, category, id },
 }) => (
   <div className={styles.productCell}>
     <div className={styles.image}>
       <img src={`/example/inventory/${image}.png`} alt={image} />
     </div>
     <div>
-      <Link href={`/admin/proiecte/${id}`} className={styles.projectLink}>
+      <Link href={`/projects/${id}`} className={styles.projectLink}>
         {value}
       </Link>
       <div className={styles.stockCell}>{category}</div>

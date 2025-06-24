@@ -4,7 +4,15 @@ import { Modal } from "../ui/modal";
 import Button from "../ui/button/Button";
 import Input from "../form/input/InputField";
 import Label from "../form/Label";
-import { Upload, FilePlus } from "lucide-react"; // ✅ Icons
+import DatePicker from "../form/date-picker";
+import Select from "../form/Select";
+
+const valueOptions = [
+  { value: "1M+", label: "€1M+" },
+  { value: "<100k", label: "< €100k" },
+  { value: "500k-1M", label: "€500k–€1M" },
+  { value: "100k-250k", label: "€100k–€250k" },
+];
 
 export default function AddProjectModal({
   isOpen,
@@ -29,6 +37,7 @@ export default function AddProjectModal({
             Completează informațiile proiectului.
           </p>
         </div>
+
         <form className="flex flex-col">
           <div className="px-2 overflow-y-auto custom-scrollbar space-y-10">
             {/* Informații de bază */}
@@ -36,17 +45,11 @@ export default function AddProjectModal({
               <h5 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white/90">
                 Informații de bază
               </h5>
+
               <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
                 <div>
                   <Label>Nume Proiect</Label>
                   <Input type="text" placeholder="Ex: Sediu Nou Coca-Cola" />
-                </div>
-                <div>
-                  <Label>Status</Label>
-                  <Input
-                    type="text"
-                    placeholder="În desfășurare / Câștigat / Pierdut"
-                  />
                 </div>
                 <div>
                   <Label>Client</Label>
@@ -54,56 +57,38 @@ export default function AddProjectModal({
                 </div>
                 <div>
                   <Label>Valoare</Label>
-                  <Input type="number" placeholder="Ex: 500000" />
-                </div>
-                <div className="lg:col-span-2">
-                  <Label>Tipuri de Lucrări</Label>
-                  <Input
-                    type="text"
-                    placeholder="Ex: Fit-out, HVAC, Sanitare"
+                  <Select
+                    options={valueOptions}
+                    placeholder="Selectează intervalul"
+                    onChange={(val) => console.log("Valoare selectată:", val)}
                   />
                 </div>
                 <div>
-                  <Label>Start Proiect</Label>
-                  <Input type="date" />
+                  <Label>Țară</Label>
+                  <Input type="text" placeholder="Ex: Romania" />
                 </div>
                 <div>
-                  <Label>Start Licitație</Label>
-                  <Input type="date" />
+                  <Label>Oraș / Județ</Label>
+                  <Input type="text" placeholder="Ex: Cluj-Napoca" />
                 </div>
                 <div>
-                  <Label>Final Licitație</Label>
-                  <Input type="date" />
+                  <Label>Adresă</Label>
+                  <Input type="text" placeholder="Ex: Bd. Eroilor 23" />
                 </div>
-              </div>
-            </div>
-
-            {/* Documente proiect */}
-            <div>
-              <h5 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white/90">
-                Documente proiect
-              </h5>
-              <div className="flex flex-col gap-3">
-                <Button variant="outline" className="justify-start gap-2">
-                  <Upload size={18} />
-                  Importă BOQ
-                </Button>
-                <label className="flex items-center gap-2 px-4 py-2 border rounded cursor-pointer text-sm text-gray-700 border-gray-300 hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-white/[0.05]">
-                  <FilePlus size={18} />
-                  Adaugă fișiere proiect
-                  <input
-                    type="file"
-                    multiple
-                    className="hidden"
-                    onChange={(e) => {
-                      const files = e.target.files;
-                      if (files && files.length > 0) {
-                        console.log("Fișiere selectate:", files);
-                        // You can store the files in state here if needed
-                      }
-                    }}
+                <div>
+                  <DatePicker
+                    id="projectStart"
+                    label="Start Proiect"
+                    placeholder="YYYY-MM-DD"
                   />
-                </label>
+                </div>
+                <div>
+                  <DatePicker
+                    id="projectEnd"
+                    label="Final Proiect"
+                    placeholder="YYYY-MM-DD"
+                  />
+                </div>
               </div>
             </div>
           </div>

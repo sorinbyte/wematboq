@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Table,
   TableBody,
@@ -6,52 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
-
-interface Subcontractor {
-  id: number;
-  name: string;
-  specialties: string[];
-  bids: number;
-  wins: number;
-}
-
-const tableData: Subcontractor[] = [
-  {
-    id: 1,
-    name: "SC ElectroInstal SRL",
-    specialties: ["Electrical Installations", "Security Systems"],
-    bids: 12,
-    wins: 4,
-  },
-  {
-    id: 2,
-    name: "Construct Alpha",
-    specialties: ["Concrete Works"],
-    bids: 8,
-    wins: 3,
-  },
-  {
-    id: 3,
-    name: "Delta HVAC Solutions",
-    specialties: ["HVAC", "Plumbing"],
-    bids: 15,
-    wins: 7,
-  },
-  {
-    id: 4,
-    name: "GreenRoof Systems",
-    specialties: ["Roofing", "Waterproofing"],
-    bids: 6,
-    wins: 2,
-  },
-  {
-    id: 5,
-    name: "FinishPro Interiors",
-    specialties: ["Interior Finishes", "Gypsum Boards", "Painting"],
-    bids: 10,
-    wins: 5,
-  },
-];
+import {
+  subcontractorsData,
+  workCategories,
+  workCategoryStyles,
+} from "@/lib/data";
 
 export default function SubantreprenoriTable() {
   return (
@@ -67,29 +27,73 @@ export default function SubantreprenoriTable() {
                 <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-start">
                   Specialități
                 </TableCell>
-                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-center">
-                  Proiecte ofertate
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-start">
+                  Persoană de Contact
                 </TableCell>
-                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-center">
-                  Proiecte câștigate
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-start">
+                  Telefon
+                </TableCell>
+                <TableCell className="px-5 py-3 text-sm font-semibold text-gray-700 dark:text-white uppercase tracking-wide text-start">
+                  Email
                 </TableCell>
               </TableRow>
             </TableHeader>
 
             <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
-              {tableData.map((sub) => (
+              {subcontractorsData.map((sub) => (
                 <TableRow key={sub.id}>
                   <TableCell className="px-5 py-4 text-start text-theme-sm text-gray-800 dark:text-white/90">
-                    {sub.name}
+                    <Link
+                      href={`/subcontractors/${sub.id}`}
+                      className="hover:underline hover:text-blue-600 dark:hover:text-blue-400"
+                    >
+                      {sub.companyName}
+                    </Link>
                   </TableCell>
+
                   <TableCell className="px-5 py-4 text-start text-theme-sm text-gray-500 dark:text-gray-400">
-                    {sub.specialties.join(", ")}
+                    <div>
+                      {(() => {
+                        const chunks = [];
+                        for (let i = 0; i < sub.specialties.length; i += 3) {
+                          chunks.push(sub.specialties.slice(i, i + 3));
+                        }
+
+                        return chunks.map((chunk, idx) => (
+                          <div key={idx} className="flex flex-wrap gap-2 mb-1">
+                            {chunk.map((code) => {
+                              const styles = workCategoryStyles[code] || {
+                                bg: "bg-gray-500",
+                                border: "border-gray-700",
+                              };
+
+                              const label =
+                                workCategories.find((cat) => cat.value === code)
+                                  ?.label ?? code;
+
+                              return (
+                                <span
+                                  key={code}
+                                  className={`text-white text-sm px-2 py-1 rounded-full ${styles.bg}`}
+                                >
+                                  {label}
+                                </span>
+                              );
+                            })}
+                          </div>
+                        ));
+                      })()}
+                    </div>
                   </TableCell>
-                  <TableCell className="px-5 py-4 text-center text-theme-sm text-gray-500 dark:text-gray-400">
-                    {sub.bids}
+
+                  <TableCell className="px-5 py-4 text-start text-base text-gray-500 dark:text-gray-400">
+                    {sub.contact.firstName} {sub.contact.lastName}
                   </TableCell>
-                  <TableCell className="px-5 py-4 text-center text-theme-sm text-gray-500 dark:text-gray-400">
-                    {sub.wins}
+                  <TableCell className="px-5 py-4 text-start text-base text-gray-500 dark:text-gray-400">
+                    {sub.contact.phone}
+                  </TableCell>
+                  <TableCell className="px-5 py-4 text-start text-base text-gray-500 dark:text-gray-400">
+                    {sub.contact.email}
                   </TableCell>
                 </TableRow>
               ))}

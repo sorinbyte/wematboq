@@ -26,7 +26,7 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 
 import styles from "./ProjectsTable.module.css";
-import { getData } from "./projectdata";
+import { projectsData } from "@/lib/data";
 import { ActionsCellRenderer } from "./cell-renderers/ActionsCellRenderer";
 import { PriceCellRenderer } from "./cell-renderers/PriceCellRenderer";
 import { ProductCellRenderer } from "./cell-renderers/ProductCellRenderer";
@@ -47,9 +47,9 @@ const paginationPageSizeSelector = [5, 10, 20];
 
 const statuses = {
   all: "Toate",
-  active: "În licitație",
-  paused: "Draft",
-  outOfStock: "Închis",
+  bidding: "În licitație",
+  draft: "Draft",
+  closed: "Închis",
 };
 
 const statusFormatter: ValueFormatterFunc = ({ value }) =>
@@ -62,80 +62,75 @@ export const ProjectsTable: FunctionComponent<Props> = ({
   const gridRef = useRef<AgGridReact>(null);
 
   const [colDefs] = useState<ColDef[]>([
-    {
-      field: "projectname",
-      headerName: "Nume Proiect",
-      cellRenderer: "agGroupCellRenderer",
-      headerClass: "header-projectname",
-      cellRendererParams: {
-        innerRenderer: ProductCellRenderer,
-      },
-      minWidth: 300,
+  {
+    field: "projectname",
+    headerName: "Nume Proiect",
+    cellRenderer: "agGroupCellRenderer",
+    headerClass: "header-projectname",
+    cellRendererParams: {
+      innerRenderer: ProductCellRenderer,
     },
-    {
-      field: "client",
-      headerName: "Client",
-      minWidth: 200,
-      cellClass: "verticalCenterCell",
-    },
-    { field: "added", headerName: "Adăugat", width: 150 },
-    {
-      field: "status",
+    minWidth: 300,
+  },
+  {
+    field: "status",
+    valueFormatter: statusFormatter,
+    cellRenderer: StatusCellRenderer,
+    filter: true,
+    filterParams: {
       valueFormatter: statusFormatter,
-      cellRenderer: StatusCellRenderer,
-      filter: true,
-      filterParams: {
-        valueFormatter: statusFormatter,
-      },
-      headerClass: "header-status",
-      minWidth: 160,
     },
-    {
-      field: "projectvalue",
-      headerName: "Valoare",
-      editable: false,
-      minWidth: 160,
-    },
-    {
-      field: "projectstart",
-      headerName: "Start",
-      width: 120,
-      headerClass: "header-projectstart",
-      cellRenderer: PriceCellRenderer,
-    },
-    {
-      field: "biddingstart",
-      headerName: "Start licitație",
-      headerClass: "header-biddingstart",
-      minWidth: 150,
-    },
-    {
-      field: "biddingend",
-      headerName: "Final licitație",
-      headerClass: "header-biddingend",
-      minWidth: 150,
-    },
-    {
-      field: "actions",
-      cellRenderer: ActionsCellRenderer,
-      minWidth: 200,
-      cellStyle: { whiteSpace: "nowrap" },
-    },
-  ]);
+    headerClass: "header-status",
+    minWidth: 160,
+  },
+  {
+    field: "projectvalue",
+    headerName: "Valoare",
+    editable: false,
+    minWidth: 160,
+  },
+
+  {
+    field: "address.city",
+    headerName: "Oraș",
+    editable: false,
+    minWidth: 160,
+  },
+  
+  {
+    field: "projectstart",
+    headerName: "Start",
+    width: 120,
+    headerClass: "header-projectstart",
+    cellRenderer: PriceCellRenderer,
+  },
+  {
+    field: "actions",
+    cellRenderer: ActionsCellRenderer,
+    minWidth: 200,
+    cellStyle: { whiteSpace: "nowrap" },
+  },
+]);
 
   const [rowData, setRowData] = useState<any[]>([]);
   useEffect(() => {
-    const data = getData();
+    const data = projectsData;
     setRowData(data);
   }, []);
 
   const defaultColDef = useMemo<ColDef>(
-    () => ({
-      resizable: false,
-      cellStyle: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
-    }),
-    []
-  );
+  () => ({
+    resizable: true,
+    flex: 1, // <-- makes all columns share remaining space equally
+    minWidth: 100,
+    cellStyle: {
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+    },
+  }),
+  []
+);
 
   const themeClass = isDarkMode ? `${gridTheme}-dark` : gridTheme;
   const [quickFilterText, setQuickFilterText] = useState<string>();
