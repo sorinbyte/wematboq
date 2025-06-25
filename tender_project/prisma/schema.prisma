@@ -1,0 +1,138 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id               Int       @id @default(autoincrement())
+  email            String    @unique
+  password         String?
+  role             UserRole
+  firstName        String
+  lastName         String
+  companyName      String?
+  uniqueId         String?   @unique
+  phone            String?
+  jobTitle         String?
+  companyCountry   String?
+  companyCityState String?
+  companyAddress   String?
+  subcontractor    Subcontractor? @relation("UserIsSubcontractor", fields: [subcontractorId], references: [id])
+  subcontractorId Int? @unique
+  createdAt        DateTime  @default(now())
+  projects         Project[]
+  uploadedBoqs     Boq[]     @relation("UploadedBoqs")
+  subcontractors   Subcontractor[] @relation("UserCreatesSubcontractor")
+}
+
+enum UserRole {
+  admin
+  contractor
+  subcontractor
+}
+
+model WorkCategory {
+  id     Int     @id @default(autoincrement())
+  code   String  @unique
+  label  String
+  subcontractors SpecialityOnSubcontractor[]
+}
+
+model Subcontractor {
+  id               Int      @id @default(autoincrement())
+  companyName      String
+  uniqueId         String   @unique
+  specialties      SpecialityOnSubcontractor[]
+  addressLine      String
+  city             String
+  state            String
+  country          String
+  contactFirstName String
+  contactLastName  String
+  contactEmail     String
+  contactPhone     String
+  createdAt        DateTime @default(now())
+  createdBy        User     @relation("UserCreatesSubcontractor", fields: [createdById], references: [id])
+  createdById      Int
+  user             User?    @relation("UserIsSubcontractor")
+}
+
+model SpecialityOnSubcontractor {
+  id              Int            @id @default(autoincrement())
+  subcontractor   Subcontractor  @relation(fields: [subcontractorId], references: [id])
+  subcontractorId Int
+  workCategory    WorkCategory   @relation(fields: [workCategoryId], references: [id])
+  workCategoryId  Int
+}
+
+model Project {
+  id           Int       @id @default(autoincrement())
+  projectname  String
+  client       String
+  added        DateTime  @default(now())
+  status       String
+  projectvalue String
+  projectstart DateTime
+  projectend   DateTime
+  addressLine  String
+  city         String
+  country      String
+  createdBy    User      @relation(fields: [createdById], references: [id])
+  createdById  Int
+  packages     Package[]
+  boqs         Boq[]
+}
+
+model Boq {
+  id           Int       @id @default(autoincrement())
+  project      Project   @relation(fields: [projectId], references: [id])
+  projectId    Int
+  uploadedBy   User      @relation("UploadedBoqs", fields: [uploadedById], references: [id])
+  uploadedById Int
+  acceptedAt   DateTime  @default(now())
+  filePath     String
+  packages     Package[]
+  rows         BoqRow[]
+}
+
+model Package {
+  id        Int       @id @default(autoincrement())
+  name      String
+  status    String
+  created   DateTime  @default(now())
+  author    String
+  boq       Boq       @relation(fields: [boqId], references: [id])
+  boqId     Int
+  project   Project   @relation(fields: [projectId], references: [id])
+  projectId Int
+
+  rows      BoqRow[]  @relation("PackageRows")
+}
+
+model BoqRow {
+  id            Int           @id @default(autoincrement())
+  boq           Boq           @relation(fields: [boqId], references: [id])
+  boqId         Int
+  description   String
+  unit          String?
+  quantity      Float?
+  unitPrice     Float?
+  totalPrice    Float?
+  createdAt     DateTime      @default(now())
+  dynamicFields BoqRowField[]
+
+  packages      Package[]     @relation("PackageRows")
+}
+
+model BoqRowField {
+  id    Int    @id @default(autoincrement())
+  row   BoqRow @relation(fields: [rowId], references: [id])
+  rowId Int
+  key   String
+  value String
+}

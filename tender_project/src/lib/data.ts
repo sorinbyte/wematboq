@@ -75,7 +75,6 @@ export const projectsData = [
     client: "Constructo S.A.",
     added: "15 Sep 2025",
     status: "closed",
-    offers: { available: 4, total: 10 },
     projectvalue: "€1M+",
     projectstart: "15 Jan 2025",
     projectend: "30 Sep 2025",
