@@ -13,11 +13,37 @@ import { workCategories } from "@/lib/data";
 
 export default function AddSubcontractorBlock() {
   const { isOpen, openModal, closeModal } = useModal();
+  const [formData, setFormData] = useState({
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  companyName: "",
+  uniqueId: "",
+  country: "",
+  cityState: "",
+  address: "",
+  workTypes: [] as string[],
+});
 
-  const handleSave = () => {
-    console.log("Subcontractor added");
-    closeModal();
-  };
+  const handleSave = async () => {
+  try {
+    const res = await fetch("/api/subcontractors", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      console.log("Subcontractor added");
+      closeModal();
+    } else {
+      console.error("Failed to save subcontractor");
+    }
+  } catch (err) {
+    console.error("Error submitting form:", err);
+  }
+};
 
   const multiOptions = workCategories.map((cat: { value: string; label: string }) => ({
   value: cat.value,
@@ -26,7 +52,7 @@ export default function AddSubcontractorBlock() {
 }));
 
   const handlePhoneNumberChange = (phoneNumber: string) => {
-    console.log("Updated phone number:", phoneNumber);
+    setFormData((prev) => ({ ...prev, phone: phoneNumber }));
   };
 
   return (
@@ -59,15 +85,30 @@ export default function AddSubcontractorBlock() {
               <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
                 <div>
                   <Label>Nume</Label>
-                  <Input type="text" placeholder="Prenume" />
+                  <Input
+                    type="text"
+                    placeholder="Popescu"
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                  />
                 </div>
                 <div>
                   <Label>Prenume</Label>
-                  <Input type="text" placeholder="Nume" />
+                  <Input
+                    type="text"
+                    placeholder="Alexandru"
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                  />
                 </div>
                 <div>
                   <Label>Email</Label>
-                  <Input type="email" placeholder="exemplu@email.com" />
+                  <Input
+                    type="email"
+                    placeholder="exemplu@mail.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
                 </div>
                 <div>
                   <Label>Telefon</Label>
@@ -87,23 +128,48 @@ export default function AddSubcontractorBlock() {
               <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
                 <div>
                   <Label>Nume companie</Label>
-                  <Input type="text" placeholder="Ex: SC Instalatii SRL" />
+                  <Input
+                    type="text"
+                    placeholder="Ex: SC Nume Companie SRL"
+                    value={formData.companyName}
+                    onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                  />
                 </div>
                 <div>
-                  <Label>ID Unic</Label>
-                  <Input type="text" placeholder="CUI / CIF / ID fiscal" />
+                  <Label>CUI</Label>
+                  <Input
+                    type="text"
+                    placeholder="RO123456"
+                    value={formData.uniqueId}
+                    onChange={(e) => setFormData({ ...formData, uniqueId: e.target.value })}
+                  />
                 </div>
                 <div>
                   <Label>Țară</Label>
-                  <Input type="text" placeholder="România" />
+                  <Input
+                    type="text"
+                    placeholder="România"
+                    value={formData.country}
+                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  />
                 </div>
                 <div>
-                  <Label>Oraș / Județ</Label>
-                  <Input type="text" placeholder="București / Ilfov" />
+                  <Label>Oraș / Localitate</Label>
+                  <Input
+                    type="text"
+                    placeholder="București"
+                    value={formData.cityState}
+                    onChange={(e) => setFormData({ ...formData, cityState: e.target.value })}
+                  />
                 </div>
                 <div className="lg:col-span-2">
                   <Label>Adresă completă</Label>
-                  <Input type="text" placeholder="Str. Exemplu nr. 1, et. 2, ap. 4" />
+                  <Input
+                    type="text"
+                    placeholder="Str. Exemplu nr. 1, et. 2, ap. 4"
+                    value={formData.address}
+                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                  />
                 </div>
               </div>
             </div>
@@ -115,7 +181,9 @@ export default function AddSubcontractorBlock() {
                 label="Selectează una sau mai multe categorii"
                 options={multiOptions}
                 defaultSelected={[]}
-                onChange={(values) => console.log("Selected work types:", values)}
+                onChange={(values) =>
+                  setFormData((prev) => ({ ...prev, workTypes: values }))
+                }
               />
             </div>
 

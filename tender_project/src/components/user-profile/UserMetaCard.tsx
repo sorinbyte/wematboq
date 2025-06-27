@@ -1,11 +1,14 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { users } from "@/lib/data";
 
-export default function UserMetaCard() {
-  const user = users.find((u) => u.id === 2);
+export type UserMeta = {
+  firstName?: string;
+  lastName?: string;
+  companyName?: string;
+};
 
+export default function UserMetaCard({ user }: { user: UserMeta }) {
   if (!user) return null;
 
   return (

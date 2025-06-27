@@ -1,16 +1,29 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { projectsData } from "@/lib/data";
 import { notFound } from "next/navigation";
+
 import ProjectOverview from "@/components/projects/ProjectOverview";
 import BoqImportSection from "@/components/projects/BoqImportSection";
-import BoqViewer from "@/components/projects/BoqViewer";
-import CreatePackageForm from "@/components/projects/CreatePackageForm"; // You'll create this next
+import CreatePackageForm from "@/components/projects/CreatePackageForm";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
+}
+
+interface Project {
+  id: number;
+  projectname: string;
+  client: string;
+  projectvalue: string;
+  address?: {
+    addressLine?: string;
+    city?: string;
+    country?: string;
+  };
+  projectstart?: string;
+  projectend?: string;
 }
 
 interface BoqSheet {
@@ -19,16 +32,47 @@ interface BoqSheet {
   rows: any[];
 }
 
-export default function ProjectPage({ params }: Props) {
-  const project = projectsData.find((p) => p.id.toString() === params.id);
-
-  if (!project) return notFound();
+export default function ProjectPage(props: Props) {
+  const router = useRouter();
+  const [projectId, setProjectId] = useState<string | null>(null);
+  const [project, setProject] = useState<Project | null>(null);
+  const [loading, setLoading] = useState(true);
 
   const [boqData, setBoqData] = useState<BoqSheet[] | null>(null);
   const [boqStatus, setBoqStatus] = useState<"idle" | "previewing" | "accepted">("idle");
   const [showPackageForm, setShowPackageForm] = useState(false);
   const [packageMeta, setPackageMeta] = useState<{ name: string; description: string } | null>(null);
-  const router = useRouter();
+
+  // Get project ID
+  useEffect(() => {
+    props.params.then((resolvedParams) => {
+      setProjectId(resolvedParams.id);
+    });
+  }, [props.params]);
+
+  // Fetch project
+  useEffect(() => {
+    if (!projectId) return;
+
+    async function fetchProject() {
+      try {
+        const res = await fetch(`/api/projects/${projectId}`);
+        if (!res.ok) return setProject(null);
+        const data = await res.json();
+        setProject(data);
+      } catch (err) {
+        console.error("Error fetching project:", err);
+        setProject(null);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProject();
+  }, [projectId]);
+
+  if (loading) return <div>Se încarcă...</div>;
+  if (!project) return notFound();
 
   return (
     <div className="p-6 space-y-6">
@@ -50,13 +94,11 @@ export default function ProjectPage({ params }: Props) {
           boqData={boqData!}
           onClose={() => setShowPackageForm(false)}
           onSave={(meta) => {
-            setPackageMeta(meta); // Save the package metadata
-            setShowPackageForm(false); // Close the form
-
-            // Navigate to the new package page
-            router.push(`/projects/${params.id}/packages/new`);
+            setPackageMeta(meta);
+            setShowPackageForm(false);
+            router.push(`/projects/${projectId}/packages/new`);
           }}
-      />
+        />
       )}
 
       <BoqImportSection

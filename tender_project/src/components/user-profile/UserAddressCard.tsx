@@ -5,18 +5,37 @@ import { Modal } from "../ui/modal";
 import Button from "../ui/button/Button";
 import Input from "../form/input/InputField";
 import Label from "../form/Label";
-import { users } from "@/lib/data";
 
-export default function UserAddressCard() {
+export type User = {
+  id: number;
+  email: string;
+  password?: string;
+  role: "admin" | "contractor" | "subcontractor";
+  firstName: string;
+  lastName: string;
+  companyName?: string;
+  uniqueId?: string;
+  phone?: string;
+  jobTitle?: string;
+  companyCountry?: string;
+  companyCityState?: string;
+  companyAddress?: string;
+  subcontractorId?: number;
+  createdAt: string;
+  createdByIp?: string;
+  updatedAt: string;
+  updatedByIp?: string;
+};
+
+export default function UserAddressCard({ user }: { user: User }) {
   const { isOpen, openModal, closeModal } = useModal();
-  const user = users.find((u) => u.id === 2);
 
   const handleSave = () => {
     console.log("Salvare adresă...");
     closeModal();
   };
 
-  if (!user || !user.companyAddress) return null;
+  if (!user?.companyAddress) return null;
 
   return (
     <>
@@ -38,21 +57,21 @@ export default function UserAddressCard() {
               <div>
                 <p className="mb-2 text-xs text-gray-500 dark:text-gray-400">Țară</p>
                 <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                  {user.companyAddress.country}
+                  {user.companyCountry}
                 </p>
               </div>
 
               <div>
                 <p className="mb-2 text-xs text-gray-500 dark:text-gray-400">Oraș/Județ</p>
                 <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                  {user.companyAddress.cityState}
+                  {user.companyCityState}
                 </p>
               </div>
 
               <div>
                 <p className="mb-2 text-xs text-gray-500 dark:text-gray-400">Adresă</p>
                 <p className="text-sm font-medium text-gray-800 dark:text-white/90">
-                  {user.companyAddress.addressLine}
+                  {user.companyAddress}
                 </p>
               </div>
 
@@ -100,15 +119,15 @@ export default function UserAddressCard() {
                 </div>
                 <div>
                   <Label>Țară</Label>
-                  <Input type="text" defaultValue={user.companyAddress.country} />
+                  <Input type="text" defaultValue={user.companyCountry || ""} />
                 </div>
                 <div>
                   <Label>Oraș/Județ</Label>
-                  <Input type="text" defaultValue={user.companyAddress.cityState} />
+                  <Input type="text" defaultValue={user.companyCityState || ""} />
                 </div>
                 <div>
                   <Label>Adresă</Label>
-                  <Input type="text" defaultValue={user.companyAddress.addressLine} />
+                  <Input type="text" defaultValue={user.companyAddress || ""} />
                 </div>
                 <div>
                   <Label>ID Unic</Label>

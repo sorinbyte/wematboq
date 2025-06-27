@@ -1,44 +1,55 @@
-import { subcontractorsData } from "@/lib/data";
-import { notFound } from "next/navigation";
+"use client";
 
-interface Props {
-  params: { id: string };
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+
+interface Subcontractor {
+  id: number;
+  companyName: string;
+  uniqueId: string;
+  contactFirstName: string;
+  contactLastName: string;
+  contactEmail: string;
+  contactPhone: string;
+  addressLine: string;
+  city: string;
+  state: string;
+  country: string;
 }
 
-export default function SubcontractorPage({ params }: Props) {
-  const subcontractor = subcontractorsData.find(
-    (sub) => sub.id.toString() === params.id
-  );
+export default function SubcontractorPage() {
+  const { id } = useParams();
+  const [subcontractor, setSubcontractor] = useState<Subcontractor | null>(null);
 
-  if (!subcontractor) return notFound();
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`/api/subcontractors/${id}`);
+      const data = await res.json();
+      setSubcontractor(data);
+    };
 
-  const { companyName, uniqueId, specialties, contact } = subcontractor;
+    if (id) {
+      fetchData();
+    }
+  }, [id]);
+
+  if (!subcontractor) {
+    return <div className="p-6 text-gray-700 dark:text-white">Loading...</div>;
+  }
 
   return (
-    <div className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">{companyName}</h1>
+    <div className="p-6 space-y-4 text-gray-700 dark:text-white">
+      <h1 className="text-2xl font-bold">{subcontractor.companyName}</h1>
+      <p><strong>ID Unic:</strong> {subcontractor.uniqueId}</p>
+      <p><strong>Persoană Contact:</strong> {subcontractor.contactFirstName} {subcontractor.contactLastName}</p>
+      <p><strong>Email:</strong> {subcontractor.contactEmail}</p>
+      <p><strong>Telefon:</strong> {subcontractor.contactPhone}</p>
+      <p><strong>Adresă:</strong> {subcontractor.addressLine}, {subcontractor.city}, {subcontractor.state}, {subcontractor.country}</p>
 
-      <div className="mb-4">
-        <p className="text-gray-700">
-          <strong>CUI Firmă:</strong> {uniqueId}
-        </p>
-        <p className="text-gray-700">
-          <strong>Specialități:</strong> {specialties.join(", ")}
-        </p>
-      </div>
-
-      <div className="mt-6">
-        <h2 className="text-xl font-semibold mb-2">Persoană de Contact</h2>
-        <p className="text-gray-700">
-          <strong>Nume:</strong> {contact.firstName} {contact.lastName}
-        </p>
-        <p className="text-gray-700">
-          <strong>Email:</strong> {contact.email}
-        </p>
-        <p className="text-gray-700">
-          <strong>Telefon:</strong> {contact.phone}
-        </p>
-      </div>
+      <Link href="/subcontractors" className="text-blue-600 hover:underline">
+        ← Înapoi la listă
+      </Link>
     </div>
   );
 }

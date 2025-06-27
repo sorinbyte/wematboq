@@ -5,13 +5,12 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.css";
 import Label from "./Label";
 import { CalenderIcon } from "../../icons";
-import Hook = flatpickr.Options.Hook;
 import DateOption = flatpickr.Options.DateOption;
 
 type PropsType = {
   id: string;
   mode?: "single" | "multiple" | "range" | "time";
-  onChange?: Hook | Hook[];
+  onDateChange?: (value: string) => void;
   defaultDate?: DateOption;
   label?: string;
   placeholder?: string;
@@ -20,7 +19,7 @@ type PropsType = {
 export default function DatePicker({
   id,
   mode,
-  onChange,
+  onDateChange,
   label,
   defaultDate,
   placeholder,
@@ -34,7 +33,12 @@ export default function DatePicker({
       monthSelectorType: "static",
       dateFormat: "Y-m-d",
       defaultDate,
-      onChange,
+      onChange: (selectedDates) => {
+        if (selectedDates.length > 0) {
+          const formattedDate = flatpickr.formatDate(selectedDates[0], "Y-m-d");
+          onDateChange?.(formattedDate);
+        }
+      },
       onOpen: () => {
         if (inputRef.current) {
           inputRef.current.scrollIntoView({
@@ -50,7 +54,7 @@ export default function DatePicker({
         flatPickrInstance.destroy();
       }
     };
-  }, [mode, onChange, id, defaultDate]);
+  }, [mode, id, defaultDate, onDateChange]);
 
   return (
     <div>

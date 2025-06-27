@@ -5,11 +5,17 @@ import { Modal } from "../ui/modal";
 import Button from "../ui/button/Button";
 import Input from "../form/input/InputField";
 import Label from "../form/Label";
-import { users } from "@/lib/data";
 
-export default function UserInfoCard() {
+export type User = {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  jobTitle?: string;
+};
+
+export default function UserInfoCard({ user }: { user: User }) {
   const { isOpen, openModal, closeModal } = useModal();
-  const user = users.find((u) => u.id === 2);
 
   const handleSave = () => {
     console.log("Salvare modificări...");
@@ -127,7 +133,7 @@ export default function UserInfoCard() {
 
                 <div>
                   <Label>Telefon</Label>
-                  <Input type="text" defaultValue="+40 700 000 000" />
+                  <Input type="text" defaultValue={user.phone} />
                 </div>
 
                 <div className="col-span-2">

@@ -8,10 +8,45 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+enum UserRole {
+  admin
+  contractor
+  subcontractor
+}
+
+enum ProjectStatus {
+  draft
+  bidding
+  closed
+}
+
+enum PackageStatus {
+  draft
+  sent
+  awaiting_response
+  completed
+}
+
+enum ProjectValueRange {
+  EUR_0_250K
+  EUR_250K_500K
+  EUR_500K_1M
+  EUR_1M_PLUS
+  EUR_5M_PLUS
+}
+
+enum OfferStatus {
+  pending
+  submitted
+  withdrawn
+  accepted
+  rejected
+}
+
 model User {
   id               Int       @id @default(autoincrement())
   email            String    @unique
-  password         String?
+  password         String
   role             UserRole
   firstName        String
   lastName         String
@@ -22,25 +57,29 @@ model User {
   companyCountry   String?
   companyCityState String?
   companyAddress   String?
+
   subcontractor    Subcontractor? @relation("UserIsSubcontractor", fields: [subcontractorId], references: [id])
-  subcontractorId Int? @unique
+  subcontractorId  Int?           @unique
+
   createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  createdByIp      String?
+  updatedByIp      String?
+
   projects         Project[]
   uploadedBoqs     Boq[]     @relation("UploadedBoqs")
   subcontractors   Subcontractor[] @relation("UserCreatesSubcontractor")
-}
+  authoredPackages Package[] @relation("UserAuthoredPackages")
 
-enum UserRole {
-  admin
-  contractor
-  subcontractor
+  @@index([email])
+  @@index([uniqueId])
 }
 
 model WorkCategory {
-  id     Int     @id @default(autoincrement())
-  code   String  @unique
-  label  String
-  subcontractors SpecialityOnSubcontractor[]
+  id              Int     @id @default(autoincrement())
+  code            String  @unique
+  label           String
+  subcontractors  SpecialityOnSubcontractor[]
 }
 
 model Subcontractor {
@@ -60,6 +99,7 @@ model Subcontractor {
   createdBy        User     @relation("UserCreatesSubcontractor", fields: [createdById], references: [id])
   createdById      Int
   user             User?    @relation("UserIsSubcontractor")
+  offers           Offer[]  @relation(name: "SubcontractorOffers")
 }
 
 model SpecialityOnSubcontractor {
@@ -72,11 +112,11 @@ model SpecialityOnSubcontractor {
 
 model Project {
   id           Int       @id @default(autoincrement())
-  projectname  String
+  projectname  String    @unique
   client       String
   added        DateTime  @default(now())
-  status       String
-  projectvalue String
+  status       ProjectStatus @default(draft)
+  projectvalue ProjectValueRange
   projectstart DateTime
   projectend   DateTime
   addressLine  String
@@ -86,6 +126,9 @@ model Project {
   createdById  Int
   packages     Package[]
   boqs         Boq[]
+  createdByIp  String?
+  updatedByIp  String?
+  updatedAt    DateTime  @updatedAt
 }
 
 model Boq {
@@ -94,45 +137,99 @@ model Boq {
   projectId    Int
   uploadedBy   User      @relation("UploadedBoqs", fields: [uploadedById], references: [id])
   uploadedById Int
-  acceptedAt   DateTime  @default(now())
+  createdAt    DateTime  @default(now())
+  acceptedAt   DateTime?
   filePath     String
+  createdByIp  String?
+  updatedByIp  String?
+  updatedAt    DateTime  @updatedAt
   packages     Package[]
   rows         BoqRow[]
-}
 
-model Package {
-  id        Int       @id @default(autoincrement())
-  name      String
-  status    String
-  created   DateTime  @default(now())
-  author    String
-  boq       Boq       @relation(fields: [boqId], references: [id])
-  boqId     Int
-  project   Project   @relation(fields: [projectId], references: [id])
-  projectId Int
-
-  rows      BoqRow[]  @relation("PackageRows")
+  @@index([projectId])
+  @@index([uploadedById])
 }
 
 model BoqRow {
-  id            Int           @id @default(autoincrement())
-  boq           Boq           @relation(fields: [boqId], references: [id])
+  id            Int        @id @default(autoincrement())
+  boq           Boq        @relation(fields: [boqId], references: [id])
   boqId         Int
   description   String
   unit          String?
   quantity      Float?
   unitPrice     Float?
   totalPrice    Float?
-  createdAt     DateTime      @default(now())
+  sheetname     String
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  createdByIp   String?
+  updatedByIp   String?
   dynamicFields BoqRowField[]
-
   packages      Package[]     @relation("PackageRows")
+  offerItems    OfferItem[]   @relation(name: "RowOfferItems")
+
+  @@index([boqId])
+  @@index([sheetname])
 }
 
 model BoqRowField {
-  id    Int    @id @default(autoincrement())
-  row   BoqRow @relation(fields: [rowId], references: [id])
-  rowId Int
-  key   String
-  value String
+  id         Int     @id @default(autoincrement())
+  row        BoqRow  @relation(fields: [rowId], references: [id])
+  rowId      Int
+  key        String
+  value      String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  createdByIp String?
+  updatedByIp String?
+
+  @@index([rowId])
+  @@index([key])
+}
+
+model Package {
+  id           Int           @id @default(autoincrement())
+  name         String
+  status       PackageStatus @default(draft)
+  created      DateTime      @default(now())
+  boq          Boq           @relation(fields: [boqId], references: [id])
+  boqId        Int
+  project      Project       @relation(fields: [projectId], references: [id])
+  projectId    Int
+  author       User          @relation("UserAuthoredPackages", fields: [authorId], references: [id])
+  authorId     Int
+  rows         BoqRow[]      @relation("PackageRows")
+  offers       Offer[]       @relation(name: "PackageOffers")
+  createdByIp  String?
+  updatedByIp  String?
+  updatedAt    DateTime      @updatedAt
+
+  @@index([name])
+}
+
+model Offer {
+  id               Int           @id @default(autoincrement())
+  package          Package       @relation(name: "PackageOffers", fields: [packageId], references: [id])
+  packageId        Int
+  subcontractor    Subcontractor @relation(name: "SubcontractorOffers", fields: [subcontractorId], references: [id])
+  subcontractorId  Int
+  submittedAt      DateTime      @default(now())
+  notes            String?
+  status           OfferStatus   @default(pending)
+  items            OfferItem[]
+  deadline         DateTime?
+  createdByIp      String?
+  updatedByIp      String?
+  updatedAt        DateTime      @updatedAt
+}
+
+model OfferItem {
+  id         Int     @id @default(autoincrement())
+  offer      Offer   @relation(fields: [offerId], references: [id])
+  offerId    Int
+  boqRow     BoqRow  @relation(name: "RowOfferItems", fields: [boqRowId], references: [id])
+  boqRowId   Int
+  unitPrice  Float?
+  totalPrice Float?
+  notes      String?
 }

@@ -26,7 +26,6 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 
 import styles from "./ProjectsTable.module.css";
-import { projectsData } from "@/lib/data";
 import { ActionsCellRenderer } from "./cell-renderers/ActionsCellRenderer";
 import { PriceCellRenderer } from "./cell-renderers/PriceCellRenderer";
 import { ProductCellRenderer } from "./cell-renderers/ProductCellRenderer";
@@ -91,7 +90,7 @@ export const ProjectsTable: FunctionComponent<Props> = ({
   },
 
   {
-    field: "address.city",
+    field: "city",
     headerName: "Oraș",
     editable: false,
     minWidth: 160,
@@ -114,9 +113,14 @@ export const ProjectsTable: FunctionComponent<Props> = ({
 
   const [rowData, setRowData] = useState<any[]>([]);
   useEffect(() => {
-    const data = projectsData;
+  const fetchProjects = async () => {
+    const res = await fetch("/api/projects");
+    const data = await res.json();
     setRowData(data);
-  }, []);
+  };
+
+  fetchProjects();
+}, []);
 
   const defaultColDef = useMemo<ColDef>(
   () => ({
