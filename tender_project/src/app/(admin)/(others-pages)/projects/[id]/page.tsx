@@ -40,17 +40,18 @@ export default function ProjectPage(props: Props) {
 
   const [boqData, setBoqData] = useState<BoqSheet[] | null>(null);
   const [boqStatus, setBoqStatus] = useState<"idle" | "previewing" | "accepted">("idle");
+  const [boqLoading, setBoqLoading] = useState(true);
   const [showPackageForm, setShowPackageForm] = useState(false);
   const [packageMeta, setPackageMeta] = useState<{ name: string; description: string } | null>(null);
 
-  // Get project ID
+  // Get project ID from params
   useEffect(() => {
     props.params.then((resolvedParams) => {
       setProjectId(resolvedParams.id);
     });
   }, [props.params]);
 
-  // Fetch project
+  // Fetch project data
   useEffect(() => {
     if (!projectId) return;
 
@@ -69,6 +70,47 @@ export default function ProjectPage(props: Props) {
     }
 
     fetchProject();
+  }, [projectId]);
+
+  useEffect(() => {
+  if (!projectId) return;
+
+  async function fetchBoq() {
+    setBoqLoading(true);
+    try {
+      const res = await fetch(`/api/projects/${projectId}/boq`);
+      const data = await res.json();
+      setBoqData(data.boqSheets || null);
+      setBoqStatus(data.boqSheets ? "accepted" : "idle");
+    } catch (err) {
+      console.error("Error fetching BOQ:", err);
+    } finally {
+      setBoqLoading(false);
+    }
+  }
+
+  fetchBoq();
+}, [projectId]);
+
+  // Fetch existing BOQ if available
+  useEffect(() => {
+    if (!projectId) return;
+
+    async function fetchBoq() {
+      try {
+        const res = await fetch(`/api/projects/${projectId}/boq`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.boqSheets) {
+          setBoqData(data.boqSheets);
+          setBoqStatus("accepted");
+        }
+      } catch (err) {
+        console.error("Error fetching BOQ:", err);
+      }
+    }
+
+    fetchBoq();
   }, [projectId]);
 
   if (loading) return <div>Se încarcă...</div>;
@@ -101,12 +143,16 @@ export default function ProjectPage(props: Props) {
         />
       )}
 
-      <BoqImportSection
-        boqData={boqData}
-        setBoqData={setBoqData}
-        boqStatus={boqStatus}
-        setBoqStatus={setBoqStatus}
-      />
+      {!boqLoading && (
+        <BoqImportSection
+          projectId={Number(projectId)}
+          boqData={boqData}
+          setBoqData={setBoqData}
+          boqStatus={boqStatus}
+          setBoqStatus={setBoqStatus}
+          uploadedById={3} // replace with real user
+        />
+      )}
     </div>
   );
 }

@@ -6,33 +6,41 @@
         fill: #465fff;
       }
 
-      .cls-2, .cls-3, .cls-4 {
+      .cls-2 {
+        font-family: Roboto-Bold, Roboto;
+        font-size: 26px;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
         fill: #fff;
       }
 
       .cls-5 {
-        font-family: Roboto-Black, Roboto;
-        font-size: 28px;
-        font-weight: 800;
-      }
-
-      .cls-3 {
         fill-opacity: .7;
       }
 
-      .cls-4 {
+      .cls-6 {
         fill-opacity: .9;
       }
     </style>
   </defs>
-  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <!-- Generator: Adobe Illustrator 28.7.8, SVG Export Plug-In . SVG Version: 1.2.0 Build 200)  -->
   <g>
     <g id="Layer_1">
-      <path class="cls-1" d="M.4,12.6C.4,5.7,6.1,0,13.1,0h22.7c7,0,12.6,5.7,12.6,12.6v22.7c0,7-5.7,12.6-12.6,12.6H13.1c-7,0-12.6-5.7-12.6-12.6V12.6Z"/>
-      <path class="cls-2" d="M13.1,12.6c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v22.7c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5V12.6Z"/>
-      <path class="cls-4" d="M22.5,22.7c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v12.6c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-12.6Z" shape-rendering="crispEdges"/>
-      <path class="cls-3" d="M32,16.4c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v18.9c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-18.9Z" shape-rendering="crispEdges"/>
-      <text class="cls-5" transform="translate(51 35)"><tspan x="0" y="0">TenderBender</tspan></text>
+      <g id="Layer_1-2" data-name="Layer_1">
+        <path class="cls-1" d="M.4,12.6C.4,5.7,6.1,0,13.1,0h22.7c7,0,12.6,5.7,12.6,12.6v22.7c0,7-5.7,12.6-12.6,12.6H13.1c-7,0-12.6-5.7-12.6-12.6V12.6h0Z"/>
+        <path class="cls-4" d="M13.1,12.6c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v22.7c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5V12.6Z"/>
+        <path class="cls-6" d="M22.5,22.7c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v12.6c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-12.6Z" shape-rendering="crispEdges"/>
+        <path class="cls-5" d="M32,16.4c0-1.4,1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5v18.9c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5v-18.9Z" shape-rendering="crispEdges"/>
+        <g class="cls-3">
+          <text class="cls-2" transform="translate(64.3 33.1)"><tspan x="0" y="0">TenderBender</tspan></text>
+        </g>
+      </g>
     </g>
   </g>
 </svg>

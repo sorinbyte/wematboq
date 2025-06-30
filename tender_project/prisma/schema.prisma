@@ -5,7 +5,6 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
 }
 
 enum UserRole {
@@ -151,22 +150,28 @@ model Boq {
 }
 
 model BoqRow {
-  id            Int        @id @default(autoincrement())
-  boq           Boq        @relation(fields: [boqId], references: [id])
-  boqId         Int
-  description   String
-  unit          String?
-  quantity      Float?
-  unitPrice     Float?
-  totalPrice    Float?
-  sheetname     String
-  createdAt     DateTime   @default(now())
-  updatedAt     DateTime   @updatedAt
-  createdByIp   String?
-  updatedByIp   String?
-  dynamicFields BoqRowField[]
-  packages      Package[]     @relation("PackageRows")
-  offerItems    OfferItem[]   @relation(name: "RowOfferItems")
+  id                  Int           @id @default(autoincrement())
+  boq                 Boq           @relation(fields: [boqId], references: [id])
+  boqId               Int
+  description         String
+  unit                String?
+  quantity            Float?
+
+  unitPriceMaterial   Float?
+  unitPriceLabour     Float?
+  totalPriceMaterial  Float?
+  totalPriceLabour    Float?
+  totalPrice          Float?        // This can be computed later if needed
+
+  sheetname           String
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+  createdByIp         String?
+  updatedByIp         String?
+
+  dynamicFields       BoqRowField[]
+  packages            Package[]     @relation("PackageRows")
+  offerItems          OfferItem[]   @relation(name: "RowOfferItems")
 
   @@index([boqId])
   @@index([sheetname])

@@ -101,7 +101,7 @@ export default function SubantreprenoriTable() {
                               return (
                                 <span
                                   key={item.id}
-                                  className={`text-white text-sm px-2 py-1 rounded-full ${styles.bg}`}
+                                  className={`inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ${styles.bg} ${styles.text} ${styles.ring}`}
                                 >
                                   {label}
                                 </span>

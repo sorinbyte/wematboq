@@ -428,21 +428,24 @@ export const workCategories = [
   { value: "520", label: "Drumuri și parcări" },
 ];
 
-export const workCategoryStyles: Record<string, { bg: string }> = {
-  "210": { bg: "bg-red-500" },
-  "220": { bg: "bg-orange-500" },
-  "310": { bg: "bg-yellow-500" },
-  "320": { bg: "bg-green-500" },
-  "330": { bg: "bg-teal-500" },
-  "340": { bg: "bg-cyan-500" },
-  "350": { bg: "bg-blue-500" },
-  "360": { bg: "bg-indigo-500" },
-  "410": { bg: "bg-purple-500" },
-  "420": { bg: "bg-pink-500" },
-  "430": { bg: "bg-rose-500" },
-  "440": { bg: "bg-lime-500" },
-  "450": { bg: "bg-emerald-500" },
-  "460": { bg: "bg-fuchsia-500" },
-  "510": { bg: "bg-sky-500" },
-  "520": { bg: "bg-violet-500" },
+export const workCategoryStyles: Record<
+  string,
+  { bg: string; text: string; ring: string }
+> = {
+  "210": { bg: "bg-red-100", text: "text-red-800", ring: "ring-red-300" },
+  "220": { bg: "bg-orange-100", text: "text-orange-800", ring: "ring-orange-300" },
+  "310": { bg: "bg-yellow-100", text: "text-yellow-800", ring: "ring-yellow-300" },
+  "320": { bg: "bg-green-100", text: "text-green-800", ring: "ring-green-300" },
+  "330": { bg: "bg-teal-100", text: "text-teal-800", ring: "ring-teal-300" },
+  "340": { bg: "bg-cyan-100", text: "text-cyan-800", ring: "ring-cyan-300" },
+  "350": { bg: "bg-blue-100", text: "text-blue-800", ring: "ring-blue-300" },
+  "360": { bg: "bg-indigo-100", text: "text-indigo-800", ring: "ring-indigo-300" },
+  "410": { bg: "bg-purple-100", text: "text-purple-800", ring: "ring-purple-300" },
+  "420": { bg: "bg-pink-100", text: "text-pink-800", ring: "ring-pink-300" },
+  "430": { bg: "bg-rose-100", text: "text-rose-800", ring: "ring-rose-300" },
+  "440": { bg: "bg-lime-100", text: "text-lime-800", ring: "ring-lime-300" },
+  "450": { bg: "bg-emerald-100", text: "text-emerald-800", ring: "ring-emerald-300" },
+  "460": { bg: "bg-fuchsia-100", text: "text-fuchsia-800", ring: "ring-fuchsia-300" },
+  "510": { bg: "bg-sky-100", text: "text-sky-800", ring: "ring-sky-300" },
+  "520": { bg: "bg-violet-100", text: "text-violet-800", ring: "ring-violet-300" },
 };

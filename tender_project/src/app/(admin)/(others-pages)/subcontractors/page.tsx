@@ -4,7 +4,6 @@ import AddSubcontractorBlock from "@/components/subcontractors/AddSubcontractorB
 import { Metadata } from "next";
 
 
-
 export default function SubantreprenoriPage() {
   return (
     <div className="space-y-6">

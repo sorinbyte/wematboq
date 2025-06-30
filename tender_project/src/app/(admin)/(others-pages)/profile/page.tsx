@@ -45,6 +45,7 @@ export default function Profile() {
         <div className="space-y-6">
           <UserMetaCard user={user} />
           <UserInfoCard user={user} />
+          {/* <UserAddressCard user={user} /> */}
         </div>
       </div>
     </div>

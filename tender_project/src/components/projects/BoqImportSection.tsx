@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { parseBoq } from "@/utils/parseBoq";
 import BoqViewer from "./BoqViewer";
 
@@ -11,19 +11,24 @@ interface BoqSheet {
 }
 
 interface Props {
+  projectId: number;
   boqData: BoqSheet[] | null;
   setBoqData: (data: BoqSheet[] | null) => void;
   boqStatus: "idle" | "previewing" | "accepted";
   setBoqStatus: (status: "idle" | "previewing" | "accepted") => void;
+  uploadedById: number;
 }
 
 export default function BoqImportSection({
+  projectId,
   boqData,
   setBoqData,
   boqStatus,
   setBoqStatus,
+  uploadedById,
 }: Props) {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [saving, setSaving] = useState(false);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -32,6 +37,7 @@ export default function BoqImportSection({
     try {
       const arrayBuffer = await file.arrayBuffer();
       const parsedArray = parseBoq(arrayBuffer);
+      console.log("Parsed BOQ Data:", parsedArray);
 
       const withHeaders: BoqSheet[] = parsedArray.map((sheet) => ({
         ...sheet,
@@ -45,8 +51,30 @@ export default function BoqImportSection({
     }
   };
 
-  const handleAccept = () => {
-    setBoqStatus("accepted");
+  const handleAccept = async () => {
+    if (!boqData) return;
+    setSaving(true);
+
+    try {
+      const response = await fetch(`/api/projects/${projectId}/boq`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ boqSheets: boqData, uploadedById }),
+      });
+
+      if (response.ok) {
+        setBoqStatus("accepted");
+      } else {
+        const errorText = await response.text();
+        console.error("Failed to save BOQ:", response.status, errorText);
+      }
+    } catch (error) {
+      console.error("Error saving BOQ:", error);
+    } finally {
+      setSaving(false);
+    }
   };
 
   const handleCancel = () => {
@@ -55,9 +83,9 @@ export default function BoqImportSection({
   };
 
   return (
-    <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6">
+    <div className="mt-6 max-w-screen-2xl w-full mx-auto rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6">
       <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-white/90">
-        Importă BOQ
+        {boqStatus === "accepted" ? "Lista cantități" : "Importă BOQ"}
       </h3>
 
       {boqStatus === "idle" && (
@@ -101,9 +129,10 @@ export default function BoqImportSection({
           <div className="flex justify-center gap-4 mt-4">
             <button
               onClick={handleAccept}
-              className="px-4 py-2 bg-brand-500 text-white rounded hover:bg-brand-600"
+              disabled={saving}
+              className="px-4 py-2 bg-brand-500 text-white rounded hover:bg-brand-600 disabled:opacity-50"
             >
-              Acceptă BOQ
+              {saving ? "Se salvează..." : "Acceptă BOQ"}
             </button>
             <button
               onClick={handleCancel}
